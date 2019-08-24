@@ -1,3 +1,3 @@
-# AlgoCasts
+# JS-TOKI
 
-Companion repo to a course on Udemy.com
+Kumpulan soal Tim Olimpiade Komputer Indonesia

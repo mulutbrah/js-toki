@@ -22,18 +22,20 @@ function memoize(fn) {
   };
 }
 
+//  Exponential 2 ^ n
 function slowFib(n) {
   if (n < 2) {
     return n;
   }
 
-  return fib(n - 1) + fib(n - 2);
+  return slowFib(n - 1) + slowFib(n - 2);
 }
 
 const fib = memoize(slowFib);
 
 module.exports = fib;
 
+// Time Complexity = Linear
 // function fib(n) {
 //   const result = [0, 1];
 //
