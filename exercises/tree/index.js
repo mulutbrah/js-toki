@@ -51,4 +51,9 @@ class Tree {
   }
 }
 
+// Implementation
+// const node = new Node(1);
+// const tree = new Tree();
+// tree.root = node;
+
 module.exports = { Tree, Node };
