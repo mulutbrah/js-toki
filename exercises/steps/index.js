@@ -17,19 +17,34 @@
 //       '### '
 //       '####'
 
+// function steps(n) {
+//   let temp = "";
+
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       if (j <= i) {
+//         temp += "#";
+//       } else {
+//         temp += " ";
+//       }
+//     }
+//     console.log(temp);
+//     temp = "";
+//   }
+// }
+
 function steps(n) {
-  let temp = ''
-  
-  for(let i=0; i<n; i++){
-    for(let j=0; j<n; j++) {
-      if(j<=i) {
-        temp+='#'
-      }else{
-        temp+=' '
-      }
-    }
-    console.log(temp)
-    temp=''
+  let temp = "";
+  const ress = [];
+
+  for (let i = 0; i <= n; i++) {
+    temp += "#";
+
+    ress.push(temp);
+  }
+
+  for (let j = 0; j < ress.length; j++) {
+    console.log(ress[j]);
   }
 }
 
