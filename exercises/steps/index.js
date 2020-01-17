@@ -37,8 +37,12 @@ function steps(n) {
   let temp = "";
   const ress = [];
 
+  for(let s = 0; <=n ;s++) {
+    temp += " ";
+  }
+
   for (let i = 0; i <= n; i++) {
-    temp += "#";
+    temp = str.substr(0,i) + "#" + str.substr(i+1)
 
     ress.push(temp);
   }
