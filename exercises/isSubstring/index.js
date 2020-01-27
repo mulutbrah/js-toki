@@ -26,4 +26,12 @@ function isSubstring(string1, string2) {
   
     return reverseStr === string1
   */
+  /*
+    3. Recursion
+    if(string2 === ""){
+        return ""
+    }else{
+        return isSubstring(string1, string2.substr(1)) + string2.charAt(0)
+    }
+ */
 }
