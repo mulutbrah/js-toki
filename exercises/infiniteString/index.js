@@ -16,9 +16,7 @@ function repeatedString(s, n) {
     hash[val] = hash[val] + 1 || 1;
   }
 
-  console.log(arr);
-
-  console.log(hash["a"]);
+  return hash["a"];
 }
 
 repeatedString("aba", 10);
