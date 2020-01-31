@@ -24,6 +24,7 @@ function isValidBracket(string) {
   //   return hash.join("").length === 0;
 
   // 3
+  // number of ']' and '[' must be same and if ']' found before count start return false
   let count = 0;
 
   for (let i = 0; i < string.length; i++) {
