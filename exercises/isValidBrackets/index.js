@@ -50,12 +50,12 @@ function isValidBracket(string) {
 
   for (let val of string) {
     if (val === "]") {
-      if (hash["["]) {
+      if (hash["["] !== hash["]"]) {
         hash[val] = hash[val] + 1 || 1;
       } else {
         return false;
       }
-    } else {
+    } else if (val === "[") {
       hash[val] = hash[val] + 1 || 1;
     }
   }
@@ -63,4 +63,8 @@ function isValidBracket(string) {
   return hash["["] === hash["]"];
 }
 
-console.log(isValidBracket("[[[][]][][][]]"));
+console.log(isValidBracket("[[[][]][][][]]")); //true
+console.log(isValidBracket("[][][]")); //true
+console.log(isValidBracket("[][][")); //false
+console.log(isValidBracket("[]][")); //false
+console.log(isValidBracket("[[][]][]")); //true
