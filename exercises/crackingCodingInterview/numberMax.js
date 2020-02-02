@@ -4,9 +4,10 @@
 */
 
 function numberMax(number1, number2) {
-  return [number1, number2].sort(function(a, b) {
-    return a + b;
-  })[0];
+  return [number1, number2].sort((a, b) => b - a)[0];
 }
 
-console.log(numberMax(100, 20));
+console.log(numberMax(100, 2000));
+console.log(numberMax(10320, 2000));
+console.log(numberMax(1, 2));
+console.log(numberMax(-100, 2000));
