@@ -1,7 +1,7 @@
 function isValidBracket(string) {
-  const hash = string.split("");
-  let isFind = false;
-  const foundHash = {};
+  // const hash = string.split("");
+  // let isFind = false;
+  // const foundHash = {};
 
   //   for (let val of string) {
   //     hash[val] = hash[val] + 1 || 1;
@@ -25,25 +25,42 @@ function isValidBracket(string) {
 
   // 3
   // number of ']' and '[' must be same and if ']' found before count start return false
-  let count = 0;
+  // let count = 0;
 
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] == "[") {
-      count++;
-    } else if (string[i] == "]") {
-      if (count == 0) {
-        return false;
+  // for (let i = 0; i < string.length; i++) {
+  //   if (string[i] == "[") {
+  //     count++;
+  //   } else if (string[i] == "]") {
+  //     if (count == 0) {
+  //       return false;
+  //     } else {
+  //       count--;
+  //     }
+  //   }
+  // }
+
+  // if (count == 0) {
+  //   return true;
+  // }
+
+  // return false;
+
+  // 4
+  const hash = {};
+
+  for (let val of string) {
+    if (val === "]") {
+      if (hash["["]) {
+        hash[val] = hash[val] + 1 || 1;
       } else {
-        count--;
+        return false;
       }
+    } else {
+      hash[val] = hash[val] + 1 || 1;
     }
   }
 
-  if (count == 0) {
-    return true;
-  }
-
-  return false;
+  return hash["["] === hash["]"];
 }
 
-console.log(isValidBracket("[][][]"));
+console.log(isValidBracket("[[[][]][][][]]"));
