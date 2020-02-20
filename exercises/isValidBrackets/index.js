@@ -48,15 +48,23 @@ function isValidBracket(string) {
   // 4
   const hash = {};
 
+  if (typeof string !== "string") {
+    return false;
+  }
+
   for (let val of string) {
-    if (val === "]") {
-      if (hash["["] !== hash["]"]) {
+    if (val === "]" || val === "[") {
+      if (val === "]") {
+        if (hash["["] !== hash["]"]) {
+          hash[val] = hash[val] + 1 || 1;
+        } else {
+          return false;
+        }
+      } else if (val === "[") {
         hash[val] = hash[val] + 1 || 1;
-      } else {
-        return false;
       }
-    } else if (val === "[") {
-      hash[val] = hash[val] + 1 || 1;
+    } else {
+      return false;
     }
   }
 
