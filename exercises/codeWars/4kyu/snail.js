@@ -6,17 +6,22 @@
 */
 
 function index(array) {
-  var res = [];
+  let res = [];
 
   if (!array.length) return res;
-  var next = array.shift();
+
+  let next = array.shift();
+
   if (next) res = res.concat(next);
-  for (var i = 0; i < array.length; i++) {
+
+  for (let i = 0; i < array.length; i++) {
     res.push(array[i].pop());
   }
+
   next = array.pop();
   if (next) res = res.concat(next.reverse());
-  for (var i = array.length - 1; i >= 0; i--) {
+
+  for (let i = array.length - 1; i >= 0; i--) {
     res.push(array[i].shift());
   }
 
