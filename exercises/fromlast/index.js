@@ -16,13 +16,13 @@ function fromLast(list, n) {
   let fast = list.getFirst();
 
   while (n > 0) {
-    fast = fast.next();
+    fast = fast.next;
     n--;
   }
 
   while (fast.next) {
-    slow = slow.next();
-    fast = fast.next();
+    slow = slow.next;
+    fast = fast.next;
   }
 
   return slow;
