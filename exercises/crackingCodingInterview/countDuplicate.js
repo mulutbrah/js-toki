@@ -6,7 +6,7 @@ function countDuplicateArray(arr) {
     hash[val] = hash[val] + 1 || 1;
   }
 
-  return Object.values(hash).filter((item) => item <= 2);
+  return Object.values(hash).filter((item) => item >= 2).length;
 
   // #2
   // return [...new Set(arr)].length === arr.length;
