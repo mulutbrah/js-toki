@@ -1,11 +1,15 @@
 function countDuplicateArray(arr) {
+  // #1
   const hash = {};
 
   for (let val of arr) {
     hash[val] = hash[val] + 1 || 1;
   }
 
-  return [hash];
+  return Object.values(hash).filter((item) => item <= 2);
+
+  // #2
+  // return [...new Set(arr)].length === arr.length;
 }
 
 console.log(
@@ -17,6 +21,6 @@ console.log(
     "wolf",
     "cat",
     "tiger",
-    "cat"
+    "cat",
   ])
 );
