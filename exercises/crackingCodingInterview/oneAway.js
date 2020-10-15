@@ -7,15 +7,10 @@ function oneAway(string1, string2) {
   if (Math.abs(string1.length - string2.length) >= 2) return false;
 
   const str2 = string2.split("");
-  let diff = 0;
 
-  for (let i = 0; i < str2.length; i++) {
-    if (!string1.includes(str2[i])) {
-      diff++;
-    }
-  }
+  const diff = str2.filter((char) => string1.includes(char));
 
-  return diff >= 2;
+  return Math.abs(diff.length - string1.length) < 2;
 }
 
 console.log(oneAway("palessss", "ple"));
