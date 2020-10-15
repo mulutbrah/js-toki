@@ -20,14 +20,7 @@ function stringCompression(string) {
     }
   }
 
-  if (count !== 1) {
-    result += currentChar + count;
-    currentChar = string[0];
-    count = 0;
-  }
-
   return result;
 }
 
 console.log(stringCompression("aabcccccaaa"));
-console.log(stringCompression("aaafsfbccccsscaaa"));

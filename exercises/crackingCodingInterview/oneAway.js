@@ -6,12 +6,11 @@
 function oneAway(string1, string2) {
   if (Math.abs(string1.length - string2.length) >= 2) return false;
 
-  const str1 = string1.split("");
   const str2 = string2.split("");
   let diff = 0;
 
   for (let i = 0; i < str2.length; i++) {
-    if (!str1.includes(str2[i])) {
+    if (!string1.includes(str2[i])) {
       diff++;
     }
   }
