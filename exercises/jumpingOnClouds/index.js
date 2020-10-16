@@ -18,3 +18,5 @@ function jumpingOnClouds(c) {
 }
 
 console.log(jumpingOnClouds("000100"));
+console.log(jumpingOnClouds("010101"));
+console.log(jumpingOnClouds("000000"));

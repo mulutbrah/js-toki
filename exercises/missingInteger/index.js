@@ -19,4 +19,4 @@ const missingInteger = (A) => {
   }
 };
 
-console.log(missingInteger([1, 3, 6, 4, 1, 2]));
+console.log(missingInteger([-1, -3, -6, -4, -5, 1, 2]));
