@@ -10,7 +10,11 @@ function removeParentheses(s) {
       bracket--;
     }
 
-    if (bracket === 0 && item !== ")") {
+    if (bracket === 0 && item === ")") {
+      return false;
+    }
+
+    if (bracket === 0) {
       result += item;
     }
   });
